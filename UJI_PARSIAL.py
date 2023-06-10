@@ -9,7 +9,6 @@ def perform_regression(df, x_col, y_col):
 
     model = sm.OLS(y, X)
     results = model.fit()
-
     return results
 
 def perform_partial_f_test(df, x_col, y_col):
@@ -30,7 +29,6 @@ def perform_partial_f_test(df, x_col, y_col):
     p_value_intercept = results.f_pvalue
     f_statistic_slope = results.fvalue
     p_value_slope = results.f_pvalue
-
     return f_statistic_intercept, p_value_intercept, f_statistic_slope, p_value_slope
 
 def main():
