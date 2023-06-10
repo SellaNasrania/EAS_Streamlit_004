@@ -14,7 +14,6 @@ df_input = st.experimental_data_editor(df, use_container_width=True)
 
 print(df_input)
 
-
 # SCATTER PLOT
 fig, ax = plt.subplots()
 ax.scatter(df_input['X'], df_input['Y'])
@@ -22,11 +21,6 @@ ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_title('Scatter Plot')
 st.pyplot(fig)
-
-# ALTERNATIF KAK JESS
-# fig = plt.figure(figsize=(10, 4))
-# sns.lmplot(x="X", data=df_input, y="Y")
-# st.pyplot(fig)
 
 # KORELASI 
 corr = np.corrcoef(df_input['X'],df_input['Y'])
