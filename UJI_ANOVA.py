@@ -4,13 +4,10 @@ import scipy.stats as stats
 
 def anova_test(groups):
     st.subheader("UJI ANOVA")
-
-    # Melakukan uji ANOVA
+    
     statistic, p_value = stats.f_oneway(*groups)
-
     st.write("Hipotesis Nol: Rata-rata populasi dari semua grup sama")
     st.write("Hipotesis Alternatif: Rata-rata populasi dari setidaknya satu grup berbeda")
-
     st.write("Statistik Uji:", statistic)
     st.write("Nilai p:", p_value)
 
@@ -21,9 +18,7 @@ def anova_test(groups):
 
 def main():
     st.title("Aplikasi Uji ANOVA")
-
     st.write("Masukkan data untuk setiap grup")
-
     num_groups = st.number_input("Jumlah grup:", min_value=2, step=1)
 
     groups = []
